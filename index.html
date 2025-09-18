@@ -26,10 +26,26 @@
             background-position: center;
             background-attachment: fixed;
         }
+        section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .pub-item, .award-item, .research-item {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
+    <!-- 顶部导航 & 个人信息 -->
     <span class="mobile btn-mobile-menu">
         <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
         <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
@@ -80,6 +96,12 @@
                                         <a href="#research" class="blog-button">Research</a>
                                     </li>
                                     <li class="navigation__item">
+                                        <a href="#publications" class="blog-button">Publications</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#awards" class="blog-button">Awards</a>
+                                    </li>
+                                    <li class="navigation__item">
                                         <a href="#contact" class="blog-button">Contact</a>
                                     </li>
                                 </ul>
@@ -126,7 +148,53 @@
         </div>
     </header>
 
-    <!-- 去掉随机壁纸脚本 -->
+    <!-- 研究经历 -->
+    <section id="research">
+        <h2>Research Experiences</h2>
+        <div class="research-item">
+            <strong>Hybrid Robotics Lab, UC Berkeley</strong> (Sep 2025 – Present)<br/>
+            Research on LLM-instructed humanoid robots under Prof. Koushil Sreenath.
+        </div>
+        <div class="research-item">
+            <strong>Mechanical Systems Control Lab, UC Berkeley</strong> (Aug 2024 – Jun 2025)<br/>
+            Developed baseline control with Isaac Lab and Unitree H1-2 robot, integrated CNN-based RL framework achieving state-of-the-art results.
+        </div>
+        <div class="research-item">
+            <strong>Shanghai Research Institute for Intelligent Autonomous Systems</strong> (Sep 2023 – Sep 2024)<br/>
+            Created SOTIF DIFF, a diffusion-based dataset generator for driver behavior under strong light interference.
+        </div>
+    </section>
+
+    <!-- 出版物 -->
+    <section id="publications">
+        <h2>Publications</h2>
+        <div class="pub-item">
+            Tian, S., Wang, H., <strong>Rong, Y.</strong>, Wang, J., Dai, R., & He, Z. (2024).  
+            <em>FastHDRNet: A new efficient method for SDR-to-HDR Translation.</em>  
+            arXiv. <a href="https://doi.org/10.48550/arXiv.2404.04483" target="_blank">https://doi.org/10.48550/arXiv.2404.04483</a>  
+            (Accepted by International Conference on Intelligent Computing 2024).
+        </div>
+    </section>
+
+    <!-- 荣誉与奖项 -->
+    <section id="awards">
+        <h2>Honors & Awards</h2>
+        <div class="award-item">Outstanding Graduate, Tongji University (2025)</div>
+        <div class="award-item">Silver Award – 2023 China International College Students’ Innovation and Entrepreneurship Competition</div>
+        <div class="award-item">First Prize – Distinguished B.E. Academic Scholarship, Tongji University (2023–2024)</div>
+        <div class="award-item">Second Prize – 2023 East China Division of National Intelligent Car Competition</div>
+        <div class="award-item">National Third Prize – 14th National Mathematics Competition for College Students (2022)</div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yirenrong20@gmail.com">yirenrong20@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/yirenrong" target="_blank">github.com/yirenrong</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yiren-rong" target="_blank">linkedin.com/in/yiren-rong</a></p>
+    </section>
+
+    <!-- 脚本 -->
     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
 </body>
 </html>
