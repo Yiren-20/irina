@@ -7,17 +7,16 @@
     const imageList = [
         './assets/img/gallery/img1.jpg',
         './assets/img/gallery/img2.jpg',
-        './assets/img/gallery/img3.jpg'
-        // 可以继续添加图片路径
+        './assets/img/gallery/img3.jpg',
+        './assets/img/gallery/img4.jpg',
+        './assets/img/gallery/img5.jpg',
+        './assets/img/gallery/img6.jpg',
+        './assets/img/gallery/img7.jpg'
     ];
-
-    // 随机选取一张图片
     function getRandomImage() {
         const idx = Math.floor(Math.random() * imageList.length);
         return imageList[idx];
     }
-
-    // 设置首页背景
     window.onload = function() {
         document.body.style.backgroundImage = 'url(' + getRandomImage() + ')';
         document.body.style.backgroundSize = 'cover';
@@ -25,7 +24,6 @@
         document.body.style.backgroundAttachment = 'fixed';
     };
     </script>
-    <!-- Meta, title, CSS, favicons -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,18 +31,13 @@
     <meta name="keywords" content="Yiren Rong, Robotics, AI, Homepage">
     <meta name="author" content="Yiren Rong">
     <title>Yiren Rong | Home</title>
-
-    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
     <link rel="apple-touch-icon" href="./assets/img/favicon.png">
     <link rel="icon" href="./assets/img/favicon.png">
-
-    <!-- 固定背景样式 -->
     <style>
         body {
-            /* 去掉 background-image 这一行，JS 会自动设置 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -61,9 +54,6 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .pub-item, .award-item, .research-item {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 
@@ -75,97 +65,84 @@
     </span>
 
     <header id="panel" class="panel-cover">
-    <div class="panel-main">
-        <div class="panel-main__inner panel-inverted">
-            <div class="panel-main__content">
-                <!-- 头像 -->
-                <div class="ih-item circle effect right_to_left">            
-                    <div class="img">
-                        <img src="./assets/img/me.jpg" alt="Yiren Rong" class="js-avatar iUp profilepic">
-                    </div>
-                    <div class="info iUp">
-                        <div class="info-back">
-                            <h2>Be Brave</h2>
-                            <p>2025 · Robotics & AI</p>
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <!-- 头像 -->
+                    <div class="ih-item circle effect right_to_left">            
+                        <div class="img">
+                            <img src="./assets/img/me.jpg" alt="Yiren Rong" class="js-avatar iUp profilepic">
+                        </div>
+                        <div class="info iUp">
+                            <div class="info-back">
+                                <h2>Be Brave</h2>
+                                <p>2025 · Robotics & AI</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                     <!-- 姓名与简介 -->
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <a href="#" title="Yiren Rong">Yiren Rong</a>
+                    <h1 class="panel-cover__title iUp">
+                        Yiren Rong
                     </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">Robotics · Reinforcement Learning · AI</p>
+                    <p class="panel-cover__subtitle iUp">Robotics · Reinforcement Learning · AI</p>
                     <hr class="panel-cover__divider iUp" />
                     <p id="description" class="panel-cover__description iUp">
-                        Master of Mechanical Engineering (Robotics Control) @ UC Berkeley <br/>
-                        Passionate about humanoid robotics, reinforcement learning, and intelligent systems.
+                        Robotics engineer and researcher, passionate about advancing intelligent systems and real-world robotics.
                     </p>
-                    <!-- 如发现有 <span id="signature"></span> 或类似个性签名标签，这里应删除 -->
 
                     <!-- 导航栏 -->
                     <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="index.html" class="blog-button">Home</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="research.html" class="blog-button">Research</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="education.html" class="blog-button">Education</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="professional.html" class="blog-button">Professional Experiences</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="passions.html" class="blog-button">Personal Passions</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="./assets/Yiren_Rong_Resume.pdf" class="blog-button" target="_blank">Resume</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="#publications" class="blog-button">Publications</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="#contact" class="blog-button">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item">
+                                    <a href="index.html" class="blog-button">Home</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="research.html" class="blog-button">Research & Engineering</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="education.html" class="blog-button">Education</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="professional.html" class="blog-button">Professional Experiences</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="passions.html" class="blog-button">Personal Passions</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="publications.html" class="blog-button">Publications</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <!-- 社交链接 -->
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/Yiren-20" title="GitHub" target="_blank">
-                                            <i class='social iconfont icon-github'></i>
-                                            <span class="label">GitHub</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="www.linkedin.com/in/yiren-rong-357842302" title="LinkedIn" target="_blank">
-                                            <i class='social iconfont icon-linkedin'></i>
-                                            <span class="label">LinkedIn</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="mailto:yirenrong20@gmail.com" title="Email">
-                                            <i class='social iconfont icon-email'></i>
-                                            <span class="label">Email</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <nav class="cover-navigation navigation--social">
+                            <ul class="navigation">
+                                <li class="navigation__item">
+                                    <a href="https://github.com/Yiren-20" title="GitHub" target="_blank">
+                                        <i class='social iconfont icon-github'></i>
+                                        <span class="label">GitHub</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="https://www.linkedin.com/in/yiren-rong-357842302" title="LinkedIn" target="_blank">
+                                        <i class='social iconfont icon-linkedin'></i>
+                                        <span class="label">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="mailto:yirenrong20@gmail.com" title="Email">
+                                        <i class='social iconfont icon-email'></i>
+                                        <span class="label">Email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
             <div class="panel-cover--overlay cover-slate"></div>
         </div>
-
         <!-- 页脚 -->
         <div class="remark iUp">
             <p class="power">Powered by 
@@ -174,52 +151,6 @@
             </p>
         </div>
     </header>
-
-    <!-- 研究经历 -->
-    <section id="research">
-        <h2>Research Experiences</h2>
-        <div class="research-item">
-            <strong>Hybrid Robotics Lab, UC Berkeley</strong> (Sep 2025 – Present)<br/>
-            Research on LLM-instructed humanoid robots under Prof. Koushil Sreenath.
-        </div>
-        <div class="research-item">
-            <strong>Mechanical Systems Control Lab, UC Berkeley</strong> (Aug 2024 – Jun 2025)<br/>
-            Developed baseline control with Isaac Lab and Unitree H1-2 robot, integrated CNN-based RL framework achieving state-of-the-art results.
-        </div>
-        <div class="research-item">
-            <strong>Shanghai Research Institute for Intelligent Autonomous Systems</strong> (Sep 2023 – Sep 2024)<br/>
-            Created SOTIF DIFF, a diffusion-based dataset generator for driver behavior under strong light interference.
-        </div>
-    </section>
-
-    <!-- 出版物 -->
-    <section id="publications">
-        <h2>Publications</h2>
-        <div class="pub-item">
-            Tian, S., Wang, H., <strong>Rong, Y.</strong>, Wang, J., Dai, R., & He, Z. (2024).  
-            <em>FastHDRNet: A new efficient method for SDR-to-HDR Translation.</em>  
-            arXiv. <a href="https://doi.org/10.48550/arXiv.2404.04483" target="_blank">https://doi.org/10.48550/arXiv.2404.04483</a>  
-            (Accepted by International Conference on Intelligent Computing 2024).
-        </div>
-    </section>
-
-    <!-- 荣誉与奖项 -->
-    <section id="awards">
-        <h2>Honors & Awards</h2>
-        <div class="award-item">Outstanding Graduate, Tongji University (2025)</div>
-        <div class="award-item">Silver Award – 2023 China International College Students’ Innovation and Entrepreneurship Competition</div>
-        <div class="award-item">First Prize – Distinguished B.E. Academic Scholarship, Tongji University (2023–2024)</div>
-        <div class="award-item">Second Prize – 2023 East China Division of National Intelligent Car Competition</div>
-        <div class="award-item">National Third Prize – 14th National Mathematics Competition for College Students (2022)</div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:yirenrong20@gmail.com">yirenrong20@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/yirenrong" target="_blank">github.com/yirenrong</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yiren-rong" target="_blank">linkedin.com/in/yiren-rong</a></p>
-    </section>
 
     <!-- 脚本 -->
     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
