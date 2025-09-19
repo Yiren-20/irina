@@ -44,7 +44,7 @@
             color: #333;
         }
         .navigation--social .navigation__item a:hover {
-            color: #0077b5; /* LinkedIn 蓝色 */`
+            color: #0077b5; /* LinkedIn 蓝色 */
         }
     </style>
 </head>
@@ -147,14 +147,23 @@
             ];
         
             const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
-            document.body.style.background = `url(${randomImage}) no-repeat center center fixed`;
+            const bgStyle = `url(${randomImage}) no-repeat center center fixed`;
+        
+            document.body.style.background = bgStyle;
             document.body.style.backgroundSize = 'cover';
+        
+            const panel = document.getElementById('panel');
+            if (panel) {
+                panel.style.background = bgStyle;
+                panel.style.backgroundSize = 'cover';
+            }
         });
+
 
     </script>
 
     <!-- 主脚本 -->
-    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
+<!--     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script> -->
 
 </body>
 </html>
