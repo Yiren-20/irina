@@ -11,7 +11,8 @@
     <title>Yiren Rong | Home</title>
 
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6aw...yourhash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
@@ -43,7 +44,7 @@
             color: #333;
         }
         .navigation--social .navigation__item a:hover {
-            color: #0077b5; /* LinkedIn 蓝色 */
+            color: #0077b5; /* LinkedIn 蓝色 */`
         }
     </style>
 </head>
@@ -144,10 +145,12 @@
                 './assets/img/gallery/img9.jpg',
                 './assets/img/gallery/img10.jpg'
             ];
-
+        
             const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
-            document.body.style.backgroundImage = 'url(' + randomImage + ')';
+            document.body.style.background = `url(${randomImage}) no-repeat center center fixed`;
+            document.body.style.backgroundSize = 'cover';
         });
+
     </script>
 
     <!-- 主脚本 -->
