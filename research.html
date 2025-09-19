@@ -2,32 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Research | Yiren Rong</title>
+    <title>Selected Research&Engineering Experiences | Yiren Rong</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
     <style>
         body { background: #f8f9fa; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         section { max-width: 900px; margin: 80px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
         h2 { text-align: center; margin-bottom: 20px; }
-        .research-item { margin-bottom: 20px; }
+        .module { margin-bottom: 40px; }
+        .module h3 { margin-bottom: 10px; }
+        .media-group { display: flex; flex-wrap: wrap; gap: 16px; margin: 10px 0; align-items: center;}
+        .media-group img { width: 160px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+        .media-group a { margin-right: 16px; }
+        .media-group video { border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
         .back-link { margin: 20px 0; display: block; text-align: center; }
     </style>
 </head>
 <body>
     <section>
         <h2>Research Experiences</h2>
-        <div class="research-item">
-            <strong>Hybrid Robotics Lab, UC Berkeley</strong> (Sep 2025 – Present)<br/>
-            Research on LLM-instructed humanoid robots under Prof. Koushil Sreenath.
+        
+        <!-- Hybrid Robotics Lab Module -->
+        <div class="module">
+            <h3>Hybrid Robotics Lab, UC Berkeley <span style="font-weight:normal;">(Sep 2025 – Present)</span></h3>
+            <p>
+                Research on LLM-instructed humanoid robots under 
+                <a href="https://www.koushilsreenath.com/" target="_blank">Prof. Koushil Sreenath</a>.
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/hybrid_robotics_lab.jpg" alt="Hybrid Robotics Lab">
+                <a href="./assets/files/HybridLab_Paper.pdf" target="_blank">Download Paper (PDF)</a>
+                <video width="320" height="180" controls>
+                    <source src="./assets/video/hybrid_lab_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-        <div class="research-item">
-            <strong>Mechanical Systems Control Lab, UC Berkeley</strong> (Aug 2024 – Jun 2025)<br/>
-            Developed baseline control with Isaac Lab and Unitree H1-2 robot, integrated CNN-based RL framework achieving state-of-the-art results.
+
+        <!-- Mechanical Systems Control Lab Module -->
+        <div class="module">
+            <h3>Mechanical Systems Control Lab, UC Berkeley <span style="font-weight:normal;">(Aug 2024 – Jun 2025)</span></h3>
+            <p>
+                Developed baseline control with Isaac Lab and Unitree H1-2 robot, 
+                integrated CNN-based RL framework achieving state-of-the-art results.
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/unitree_robot.jpg" alt="Unitree H1-2 Robot">
+                <a href="./assets/files/UnitreeRL_Report.pdf" target="_blank">Download RL Report (PDF)</a>
+                <video width="320" height="180" controls>
+                    <source src="./assets/video/unitree_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-        <div class="research-item">
-            <strong>Shanghai Research Institute for Intelligent Autonomous Systems</strong> (Sep 2023 – Sep 2024)<br/>
-            Created SOTIF DIFF, a diffusion-based dataset generator for driver behavior under strong light interference.
+
+        <!-- National College Smart Car Race Competition Module -->
+        <div class="module">
+            <h3>National College Smart Car Race Competition <span style="font-weight:normal;">(Sep 2022 - Aug 2023)</span></h3>
+            <p>
+                Second Prize, 2023 East China Division of National Intelligent Car Competition (Mobile Robot Application track, Team Leader, Awarding Organization: Chinese Association of Automation)
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/sotif_diff.jpg" alt="SOTIF DIFF">
+                <a href="https://github.com/Yiren-20/Mathematical-Modeling" target="_blank">
+                    View on GitHub
+                </a>
+                <video width="320" height="180" controls>
+                    <source src="./assets/video/unitree_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-        <a class="back-link" href="index.html">← Back to Home</a>
     </section>
+
+    <!-- Engineering Section -->
+    <section>
+        <h2>Engineering Experiences</h2>
+        <div class="module">
+            <h3>Embedded Intelligent System Remote Clock <span style="font-weight:normal;">(2023)</span></h3>
+            <p>
+                Developed a remote clock system for embedded intelligent applications. See source and documentation below.
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/embedded_system.jpg" alt="Embedded System Clock">
+                <a href="https://github.com/Yiren-20/The-embedded-intelligent-system-remote-clock" target="_blank">
+                    View on GitHub
+                </a>
+                <video width="320" height="180" controls>
+                    <source src="./assets/video/embedded_clock_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="module">
+            <h3>Dual Machine Acceleration Project <span style="font-weight:normal;">(2024)</span></h3>
+            <p>
+                Designed and implemented algorithms for dual machine acceleration and synchronization tasks.
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/dual_machine.jpg" alt="Dual Machine Acceleration">
+                <a href="https://github.com/Yiren-20/Dual-Machine-Acceleration" target="_blank">
+                    View on GitHub
+                </a>
+                <video width="320" height="180" controls>
+                    <source src="./assets/video/dual_machine_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    
+ 
+      
+        <div class="module">
+            <h3>Mathematical Modeling Competition <span style="font-weight:normal;">(Sep 2022)</span></h3>
+            <p>
+                Second Prize, 2022 Contemporary Undergraduate Mathematical Contest in Modeling (Team Leader, Awarding Organization: China Society for Industrial and Applied Mathematics)
+            </p>
+            <div class="media-group">
+                <img src="./assets/img/sotif_diff.jpg" alt="SOTIF DIFF">
+                <a href="https://github.com/Yiren-20/Mathematical-Modeling" target="_blank">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+        
+      
+    </section>
+    <a class="back-link" href="index.html">← Back to Home</a>
 </body>
 </html>
