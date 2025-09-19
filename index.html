@@ -2,31 +2,6 @@
 <html lang="en">
 
 <head>
-    <script>
-    // 图片库数组
-    const imageList = [
-        // './assets/img/gallery/img1.jpg',
-        './assets/img/gallery/img2.jpg',
-        './assets/img/gallery/img3.jpg',
-        './assets/img/gallery/img4.jpg',
-        './assets/img/gallery/img5.jpg',
-        './assets/img/gallery/img6.jpg',
-        './assets/img/gallery/img7.jpg',
-        './assets/img/gallery/img8.jpg',
-        './assets/img/gallery/img9.jpg',
-        './assets/img/gallery/img10.jpg'
-    ];
-    function getRandomImage() {
-        const idx = Math.floor(Math.random() * imageList.length);
-        return imageList[idx];
-    }
-    window.onload = function() {
-        document.body.style.backgroundImage = 'url(' + getRandomImage() + ')';
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center';
-        document.body.style.backgroundAttachment = 'fixed';
-    };
-    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,16 +9,19 @@
     <meta name="keywords" content="Yiren Rong, Robotics, AI, Homepage">
     <meta name="author" content="Yiren Rong">
     <title>Yiren Rong | Home</title>
+
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
     <link rel="apple-touch-icon" href="./assets/img/favicon.png">
     <link rel="icon" href="./assets/img/favicon.png">
+
     <style>
         body {
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
         section {
             max-width: 900px;
@@ -61,6 +39,7 @@
 </head>
 
 <body>
+
     <!-- 顶部导航 & 个人信息 -->
     <span class="mobile btn-mobile-menu">
         <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
@@ -85,9 +64,7 @@
                     </div>
 
                     <!-- 姓名与简介 -->
-                    <h1 class="panel-cover__title iUp">
-                        Yiren Rong
-                    </h1>
+                    <h1 class="panel-cover__title iUp">Yiren Rong</h1>
                     <p class="panel-cover__subtitle iUp">Master @ UC Berkeley | Bachelor @ Tongji Univ</p>
                     <hr class="panel-cover__divider iUp" />
                     <p id="description" class="panel-cover__description iUp">
@@ -98,24 +75,12 @@
                     <div class="navigation-wrapper iUp">
                         <nav class="cover-navigation cover-navigation--primary">
                             <ul class="navigation">
-                                <li class="navigation__item">
-                                    <a href="index.html" class="blog-button">Home</a>
-                                </li> 
-                                <li class="navigation__item">
-                                    <a href="education.html" class="blog-button">Education</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="research.html" class="blog-button">Research & Engineering</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="professional.html" class="blog-button">Professional Experiences</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="passions.html" class="blog-button">Personal Passions</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="publications.html" class="blog-button">Publications</a>
-                                </li>
+                                <li class="navigation__item"><a href="index.html" class="blog-button">Home</a></li> 
+                                <li class="navigation__item"><a href="education.html" class="blog-button">Education</a></li>
+                                <li class="navigation__item"><a href="research.html" class="blog-button">Research & Engineering</a></li>
+                                <li class="navigation__item"><a href="professional.html" class="blog-button">Professional Experiences</a></li>
+                                <li class="navigation__item"><a href="passions.html" class="blog-button">Personal Passions</a></li>
+                                <li class="navigation__item"><a href="publications.html" class="blog-button">Publications</a></li>
                             </ul>
                         </nav>
                         <!-- 社交链接 -->
@@ -146,16 +111,40 @@
             </div>
             <div class="panel-cover--overlay cover-slate"></div>
         </div>
+
         <!-- 页脚 -->
         <div class="remark iUp">
             <p class="power">Powered by 
-                <a href="https://github.com/" target="_blank">GitHub Pages</a> 
-                · Customized by Yiren Rong
+                <a href="https://github.com/" target="_blank">GitHub Pages</a> · Customized by Yiren Rong
             </p>
         </div>
     </header>
 
-    <!-- 脚本 -->
+    <!-- 随机背景图脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageList = [
+                './assets/img/gallery/img2.jpg',
+                './assets/img/gallery/img3.jpg',
+                './assets/img/gallery/img4.jpg',
+                './assets/img/gallery/img5.jpg',
+                './assets/img/gallery/img6.jpg',
+                './assets/img/gallery/img7.jpg',
+                './assets/img/gallery/img8.jpg',
+                './assets/img/gallery/img9.jpg',
+                './assets/img/gallery/img10.jpg'
+            ];
+
+            const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
+            document.body.style.backgroundImage = 'url(' + randomImage + ')';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundAttachment = 'fixed';
+        });
+    </script>
+
+    <!-- 主脚本 -->
     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
+
 </body>
 </html>
