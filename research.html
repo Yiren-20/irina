@@ -17,7 +17,7 @@
         }
 
         section { 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: 60px auto; 
             padding: 30px 40px; 
             background: #ffffff; 
@@ -53,16 +53,23 @@
         .media-group { 
             display: flex; 
             flex-wrap: wrap; 
-            gap: 16px; 
+            gap: 20px; 
             margin: 15px 0; 
             align-items: center;
+            justify-content: flex-start;
         }
 
         .media-group img, .media-group video { 
-            width: 160px; 
+            width: 280px;       /* 放大图片和视频 */
+            height: auto;
             border-radius: 12px; 
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .media-group img:hover, .media-group video:hover {
+            transform: scale(1.05);
         }
 
         .media-group a { 
@@ -104,10 +111,12 @@
         <!-- Hybrid Robotics Lab Module -->
         <div class="module">
             <h3>Hybrid Robotics Lab, UC Berkeley <span style="font-weight:normal;">(Sep 2025 – Present)</span></h3>
+            <span style="font-weight:normal;">US</span>
             <p>
                 Research on LLM-instructed humanoid robots under 
                 <a href="https://www.koushilsreenath.com/" target="_blank">Prof. Koushil Sreenath</a>.
             </p>
+            
             <div class="media-group">
                 <img src="./assets/img/hybrid_robotics_lab.jpg" alt="Hybrid Robotics Lab">
             </div>
@@ -117,7 +126,7 @@
         <div class="module">
             <h3>
                 <a href="https://msc.berkeley.edu/" target="_blank">Mechanical Systems Control Laboratory</a>, University of California, Berkeley 
-                <span style="font-weight:normal;">Berkeley, US</span>
+                <span style="font-weight:normal;">US</span>
                 <span style="font-weight:normal;">(Aug 2024 – June 2025)</span>
             </h3>
             <p>
@@ -126,10 +135,10 @@
             </p>
             <ul class="detail-list">
                 <li>Established a reproducible baseline in Isaac Lab with the Unitree H1-2 robot model, enabling systematic evaluation of navigation across challenging terrains.</li>
-                <li>Introduced a novel CNN-augmented end-to-end reinforcement learning framework that outperforms prior methods and released a RoboCasa-based kitchen manipulation environment as a benchmark.</li>
+                <li>Introduced a novel CNN-augmented end-to-end reinforcement learning framework and released a RoboCasa-based kitchen manipulation environment as a benchmark.</li>
             </ul>
             <div class="media-group">
-                <video width="320" height="180" controls>
+                <video controls>
                     <source src="./assets/video/unitree_demo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -147,7 +156,7 @@
                 <a href="https://github.com/Yiren-20/Smart_car" target="_blank">
                     View on GitHub
                 </a>
-                <video width="320" height="180" controls>
+                <video controls>
                     <source src="./assets/video/smatr_car.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -182,7 +191,7 @@
                 <a href="https://github.com/Yiren-20/The-embedded-intelligent-system-remote-clock" target="_blank">
                     View on GitHub
                 </a>
-                <video width="320" height="180" controls>
+                <video controls>
                     <source src="./assets/video/embedded_clock_demo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
