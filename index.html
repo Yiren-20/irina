@@ -2,6 +2,29 @@
 <html lang="en">
 
 <head>
+    <script>
+    // 图片库数组
+    const imageList = [
+        './assets/img/gallery/img1.jpg',
+        './assets/img/gallery/img2.jpg',
+        './assets/img/gallery/img3.jpg'
+        // 可以继续添加图片路径
+    ];
+
+    // 随机选取一张图片
+    function getRandomImage() {
+        const idx = Math.floor(Math.random() * imageList.length);
+        return imageList[idx];
+    }
+
+    // 设置首页背景
+    window.onload = function() {
+        document.body.style.backgroundImage = 'url(' + getRandomImage() + ')';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundAttachment = 'fixed';
+    };
+    </script>
     <!-- Meta, title, CSS, favicons -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +44,7 @@
     <!-- 固定背景样式 -->
     <style>
         body {
-            background-image: url('./assets/img/bg.jpg'); /* 换成你自己的背景图 */
+            /* 去掉 background-image 这一行，JS 会自动设置 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -80,67 +103,40 @@
                         Master of Mechanical Engineering (Robotics Control) @ UC Berkeley <br/>
                         Passionate about humanoid robotics, reinforcement learning, and intelligent systems.
                     </p>
+                    <!-- 如发现有 <span id="signature"></span> 或类似个性签名标签，这里应删除 -->
 
                     <!-- 导航栏 -->
-                    <div class="navigation-wrapper iUp">
-                    <div>
-                        <nav class="cover-navigation cover-navigation--primary">
-                            <ul class="navigation">
-                                <li class="navigation__item">
-                                    <a href="index.html" class="blog-button">Home</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="research.html" class="blog-button">Research</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="education.html" class="blog-button">Education</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="professional.html" class="blog-button">Professional Experiences</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="passions.html" class="blog-button">Personal Passions</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="./assets/Yiren_Rong_Resume.pdf" class="blog-button" target="_blank">Resume</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="#publications" class="blog-button">Publications</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="#contact" class="blog-button">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-<!--                     ####################################
                     <div class="navigation-wrapper iUp">
                         <div>
                             <nav class="cover-navigation cover-navigation--primary">
                                 <ul class="navigation">
                                     <li class="navigation__item">
-                                        <a href="/" class="blog-button">Home</a>
+                                        <a href="index.html" class="blog-button">Home</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="research.html" class="blog-button">Research</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="education.html" class="blog-button">Education</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="professional.html" class="blog-button">Professional Experiences</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="passions.html" class="blog-button">Personal Passions</a>
                                     </li>
                                     <li class="navigation__item">
                                         <a href="./assets/Yiren_Rong_Resume.pdf" class="blog-button" target="_blank">Resume</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#research" class="blog-button">Research</a>
-                                    </li>
-                                    <li class="navigation__item">
                                         <a href="#publications" class="blog-button">Publications</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="#awards" class="blog-button">Awards</a>
                                     </li>
                                     <li class="navigation__item">
                                         <a href="#contact" class="blog-button">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
-                        </div> -->
-
+                        </div>
                         <!-- 社交链接 -->
                         <div class="iUp">
                             <nav class="cover-navigation navigation--social">
