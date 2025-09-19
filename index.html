@@ -10,9 +10,11 @@
     <meta name="author" content="Yiren Rong">
     <title>Yiren Rong | Home</title>
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6aw...yourhash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
     <link rel="apple-touch-icon" href="./assets/img/favicon.png">
     <link rel="icon" href="./assets/img/favicon.png">
 
@@ -34,6 +36,14 @@
         section h2 {
             text-align: center;
             margin-bottom: 20px;
+        }
+        .navigation--social .navigation__item a {
+            font-size: 1.4em;
+            margin-right: 10px;
+            color: #333;
+        }
+        .navigation--social .navigation__item a:hover {
+            color: #0077b5; /* LinkedIn 蓝色 */
         }
     </style>
 </head>
@@ -88,19 +98,19 @@
                             <ul class="navigation">
                                 <li class="navigation__item">
                                     <a href="https://github.com/Yiren-20" title="GitHub" target="_blank">
-                                        <i class='social iconfont icon-github'></i>
+                                        <i class="fab fa-github"></i>
                                         <span class="label">GitHub</span>
                                     </a>
                                 </li>
                                 <li class="navigation__item">
                                     <a href="https://www.linkedin.com/in/yiren-rong-357842302" title="LinkedIn" target="_blank">
-                                        <i class='social iconfont icon-linkedin'></i>
+                                        <i class="fab fa-linkedin"></i>
                                         <span class="label">LinkedIn</span>
                                     </a>
                                 </li>
                                 <li class="navigation__item">
                                     <a href="mailto:yirenrong20@gmail.com" title="Email">
-                                        <i class='social iconfont icon-email'></i>
+                                        <i class="fas fa-envelope"></i>
                                         <span class="label">Email</span>
                                     </a>
                                 </li>
@@ -137,9 +147,6 @@
 
             const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
             document.body.style.backgroundImage = 'url(' + randomImage + ')';
-            document.body.style.backgroundSize = 'cover';
-            document.body.style.backgroundPosition = 'center';
-            document.body.style.backgroundAttachment = 'fixed';
         });
     </script>
 
