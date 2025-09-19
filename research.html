@@ -60,7 +60,7 @@
         }
 
         .media-group img, .media-group video { 
-            width: 280px;       /* 图片和视频大小 */
+            width: auto;       /* 图片和视频大小 */
             height: auto;
             border-radius: 12px; 
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -80,7 +80,7 @@
         }
 
         .pic-gallery img {
-            width: 220px;
+            width: auto;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -127,8 +127,11 @@
         
         <!-- Hybrid Robotics Lab -->
         <section class="module">
-            <h3>Hybrid Robotics Lab, UC Berkeley <span style="font-weight:normal;">(Sep 2025 – Present)</span></h3>
-            <span style="font-weight:normal;">US</span>
+            <h3>
+                Hybrid Robotics Lab,  University of California, Berkeley 
+                <span style="font-weight:normal;">US</span>
+                <span style="font-weight:normal;">(Sep 2025 – Present)</span>
+            </h3>
             <p>
                 Research on LLM-instructed humanoid robots under 
                 <a href="https://www.koushilsreenath.com/" target="_blank">Prof. Koushil Sreenath</a>.
@@ -143,12 +146,15 @@
                 <span style="font-weight:normal;">(Aug 2024 – June 2025)</span>
             </h3>
             <p>
-                Research on humanoid robot learning under 
+                Research Intern on humanoid robot learning under 
                 <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/" target="_blank">Prof. Masayoshi Tomizuka</a>
             </p>
             <ul class="detail-list">
-                <li>Established a reproducible baseline in Isaac Lab with the Unitree H1-2 robot model, enabling systematic evaluation of navigation across challenging terrains.</li>
-                <li>Introduced a novel CNN-augmented end-to-end reinforcement learning framework and released a RoboCasa-based kitchen manipulation environment as a benchmark.</li>
+                <li>This study proposes a novel framework that integrates Proximal Policy Optimization (PPO) with imitation learning.</li>
+                <li>An adaptive curriculum learning mechanism is implemented to dynamically adjust the training difficulty in accordance with the robot's performance</li>
+                <li>This research introduces CNN Embedding, which incorporates past and future information into observation sequences to enhance the policy network's ability to understand and plan complex motion tasks.</li>
+
+                <li>The training is conducted within the Isaac Sim environment, utilizing the Unitree H1-2 humanoid robot model.</li>
             </ul>
             <div class="pic-gallery">
                 <img src="./assets/other_img/human_train.png" alt="Train">
@@ -164,6 +170,13 @@
             <p>
                 Second Prize, 2023 East China Division of National Smart Car Competition (Mobile Robot Application track, Team Leader, Awarding Organization: Chinese Association of Automation)
             </p>
+            <ul class="detail-list">
+                <li>The smart car was configured with mecanum wheels for omnidirectional movement and equipped with LiDAR, a microphone array, an IMU and a camera for comprehensive sensing.</li>
+                <li>An adaptive curriculum learning mechanism is implemented to dynamically adjust the training difficulty in accordance with the robot's performance</li>
+                <li>This research introduces CNN Embedding, which incorporates past and future information into observation sequences to enhance the policy network's ability to understand and plan complex motion tasks.</li>
+                <li>The training is conducted within the Isaac Sim environment, utilizing the Unitree H1-2 humanoid robot model.</li>
+            </ul>
+            
             <div class="pic-gallery">
                 <img src="./assets/other_img/img_car.jpg" alt="Mobile Robot">
                 <a href="https://github.com/Yiren-20/Smart_car" target="_blank">
