@@ -60,7 +60,7 @@
         }
 
         .media-group img, .media-group video { 
-            width: 280px;       /* 放大图片和视频 */
+            width: 280px;       /* 图片和视频大小 */
             height: auto;
             border-radius: 12px; 
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -72,14 +72,29 @@
             transform: scale(1.05);
         }
 
-        .media-group a { 
-            color: #3b82f6; 
-            text-decoration: none; 
-            font-weight: 500;
+        .pic-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
         }
 
-        .media-group a:hover { 
-            text-decoration: underline; 
+        .pic-gallery img {
+            width: 220px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .pic-gallery a {
+            align-self: center;
+            font-weight: 500;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .pic-gallery a:hover {
+            text-decoration: underline;
         }
 
         .back-link { 
