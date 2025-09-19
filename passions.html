@@ -7,17 +7,52 @@
     <style>
         body { background: #f8f9fa; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         section { max-width: 900px; margin: 80px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
-        h2 { text-align: center; margin-bottom: 20px; }
-        .passion-item { margin-bottom: 20px; }
+        h2, h3 { text-align: center; margin-bottom: 20px; }
+        .module { margin-bottom: 40px; }
+        .pic-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+        .pic-gallery img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
         .back-link { margin: 20px 0; display: block; text-align: center; }
     </style>
 </head>
 <body>
     <section>
         <h2>Personal Passions</h2>
-        <div class="passion-item">
-            Robotics, Artificial Intelligence, Reinforcement Learning, Music, Photography, Traveling, and Creative Writing.
+
+        <div class="module">
+            <h3>Entrepreneurship</h3>
+            <p>
+                I am passionate about entrepreneurship, innovation, and building things from the ground up. From robotics startups to AI projects, I love exploring new ideas and collaborating with inspiring teams.
+            </p>
         </div>
+
+        <div class="module">
+            <h3>高原运动</h3>
+            <p>
+                热爱高原运动，曾在青藏高原徒步、骑行、登山，体验自然的壮美与人类的坚韧。高原运动不仅锻炼了体魄，更让人感悟生命的意义。
+            </p>
+        </div>
+
+        <div class="module">
+            <h3>美丽图片</h3>
+            <div class="pic-gallery">
+                <img src="./assets/img/gallery/img1.jpg" alt="Beautiful 1">
+                <img src="./assets/img/gallery/img2.jpg" alt="Beautiful 2">
+                <img src="./assets/img/gallery/img3.jpg" alt="Beautiful 3">
+                <!-- 可继续添加图片，如 <img src="./assets/img/gallery/img4.jpg" alt="Beautiful 4"> -->
+            </div>
+        </div>
+
         <a class="back-link" href="index.html">← Back to Home</a>
     </section>
 </body>
