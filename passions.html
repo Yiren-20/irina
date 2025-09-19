@@ -5,10 +5,25 @@
     <title>Personal Passions | Yiren Rong</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
     <style>
-        body { background: #f8f9fa; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-        section { max-width: 900px; margin: 80px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
-        h2, h3 { text-align: center; margin-bottom: 20px; }
-        .module { margin-bottom: 40px; }
+        body { 
+            background: #f8f9fa; 
+            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+        }
+        section { 
+            max-width: 1000px; 
+            margin: 80px auto; 
+            padding: 20px; 
+            background: #fff; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2, h3 { 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+        .module { 
+            margin-bottom: 40px; 
+        }
         .pic-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -16,20 +31,36 @@
             justify-content: center;
         }
         .pic-gallery img {
-            width: 220px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: 300px;       /* 图片更大 */
+            height: auto;       /* 保持原始比例 */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        .back-link { margin: 20px 0; display: block; text-align: center; }
+        .pic-gallery img:hover {
+            transform: scale(1.05); /* 悬停放大 */
+        }
+        .back-link { 
+            margin: 20px 0; 
+            display: block; 
+            text-align: center; 
+        }
+        /* YC Logo 调整 */
+        .module img.logo {
+            width: 180px;
+            border-radius: 8px;
+            margin: 12px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
     <section>
         <h2>Personal Passions</h2>
 
-       <div class="module">
+        <div class="module">
             <h3>Entrepreneurship</h3>
             <p>
                 <strong>YC China (MiraclePlus奇绩创坛) Startup Camp</strong><br>
@@ -37,22 +68,15 @@
                 Led a team as the only female member to develop an autonomous robot for multi-area safety inspections. 
                 Passed first-round screening (<10% acceptance), and created a business proposal covering market analysis, product design, and go-to-market strategy.
             </p>
-            <img src="./assets/img/img_yc.jpg" alt="YC China Logo" style="width:180px; border-radius:8px; margin:8px 0;">
-<!--             <img src="./assets/img/img_ycmeet.jpg" alt="Startup Camp Photo" style="width:240px; border-radius:8px; margin:8px 0;"> -->
+            <img src="./assets/img/img_yc.jpg" alt="YC China Logo" class="logo">
         </div>
-
-
-<!--         <div class="module">
-            <h3>高原运动</h3>
-            <p>
-                热爱高原运动，曾在青藏高原徒步、骑行、登山，体验自然的壮美与人类的坚韧。高原运动不仅锻炼了体魄，更让人感悟生命的意义。
-            </p>
-        </div> -->
 
         <div class="module">
             <h3>High-Altitude Hiking & Photography</h3>
+            <p style="text-align:center; margin-bottom:20px;">
+                Passionate about high-altitude hiking and capturing breathtaking landscapes. Explored mountains, grasslands, rivers, and gorges, combining endurance with nature’s beauty.
+            </p>
             <div class="pic-gallery">
-<!--                 <img src="./assets/img/gallery/img1.jpg" alt="> -->
                 <img src="./assets/img/gallery/img11.jpg" alt="Meili Snow Mountain">
                 <img src="./assets/img/gallery/img3.jpg" alt="Baima Snow Mountain">
                 <img src="./assets/img/gallery/img10.jpg" alt="Ruoergai Grassland">
@@ -60,9 +84,6 @@
                 <img src="./assets/img/gallery/img12.jpg" alt="Tiger Leaping Gorge, Jinsha River">
                 <img src="./assets/img/gallery/img_zhagana.jpg" alt="Zhagana, Gansu">
                 <img src="./assets/img/gallery/img_wujiu.jpg" alt="Himalayan Vulture">
-                
-                
-                <!-- 可继续添加图片，如 <img src="./assets/img/gallery/img4.jpg" alt="Beautiful 4"> -->
             </div>
         </div>
 
