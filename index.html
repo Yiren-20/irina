@@ -27,11 +27,11 @@
         max-width: 900px;
         margin: 80px auto;
         padding: 30px 20px;
-        background: rgba(255, 255, 255, 0.1); /* 半透明漂浮效果 */
+        background: rgba(255, 255, 255, 0.2); /* 半透明漂浮效果 */
         border-radius: 16px;
         text-align: center;
         box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-        backdrop-filter: blur(6px); /* 背景轻微模糊，增强漂浮感 */
+        backdrop-filter: blur(3px); /* 背景轻微模糊，增强漂浮感 */
     }
 
     /* 头像 */
@@ -65,7 +65,7 @@
         margin-top: 20px;
         display: inline-block;
         padding: 10px 0;
-        background: rgba(255, 255, 255, 0.2); /* 浮动半透明背景 */
+        background: rgba(255, 255, 255, 0.4); /* 浮动半透明背景 */
         border-radius: 16px;
     }
 
@@ -122,7 +122,8 @@
 
     <!-- 导航 -->
     <nav class="primary">
-        <a href="/yiren-20/" >Home</a>
+        <a href="javascript:void(0);" onclick="window.location.href=window.location.pathname;">Home</a>
+
         <a href="education.html">Education</a>
         <a href="research.html">Research & Engineering</a>
         <a href="professional.html">Professional Experiences</a>
