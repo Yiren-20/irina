@@ -31,6 +31,19 @@
             justify-content: center;
         }
         .pic-gallery img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .pic-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+/*         .pic-gallery img {
             width: 300px;       /* 图片更大 */
             height: auto;       /* 保持原始比例 */
             border-radius: 12px;
@@ -39,7 +52,7 @@
         }
         .pic-gallery img:hover {
             transform: scale(1.05); /* 悬停放大 */
-        }
+        } */
         .back-link { 
             margin: 20px 0; 
             display: block; 
@@ -65,10 +78,15 @@
             <p>
                 <strong>YC China (MiraclePlus奇绩创坛) Startup Camp</strong><br>
                 <em>Team Leader (CEO), May 2023 - Aug 2023</em><br>
-                Led a team as the only female member to develop an autonomous robot for multi-area safety inspections. 
-                Passed first-round screening (<10% acceptance), and created a business proposal covering market analysis, product design, and go-to-market strategy.
+                <li>Led a team as the only female member to develop an innovative autonomous robot solution for multi-area safety inspections in large-scale
+industrial environments  </li>
+                <li>Successfully passed the first round of screening with less than 10% acceptance rate, receiving an invitation to the offline camp among mostly
+established companies </li>
+                <li> Developed a comprehensive business proposal including market analysis, product design, and go-to-market strategy for a robot capable of 3D mapping, navigation, and multi-sensor environmental adaptations
+                </li>
+                Passed first-round screening (<10% acceptance), and created a business proposal covering market analysis, product design and go-to-market strategy.
             </p>
-            <img src="./assets/img/img_yc.jpg" alt="YC China Logo" class="logo">
+            <img src="./assets/img/other_img/img_yc.jpg" alt="YC China Logo" class="logo">
         </div>
 
         <div class="module">
