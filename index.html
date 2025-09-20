@@ -27,10 +27,11 @@
         max-width: 900px;
         margin: 80px auto;
         padding: 30px 20px;
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.3); /* 半透明漂浮效果 */
+        border-radius: 16px;
         text-align: center;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        backdrop-filter: blur(6px); /* 背景轻微模糊，增强漂浮感 */
     }
 
     /* 头像 */
@@ -60,20 +61,32 @@
     }
 
     /* 导航按钮 */
+    nav.primary {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 0;
+        background: rgba(255, 255, 255, 0.2); /* 浮动半透明背景 */
+        border-radius: 16px;
+    }
+
     nav.primary a {
         display: inline-block;
-        margin: 5px 8px;
-        padding: 8px 16px;
+        margin: 5px 10px;
+        padding: 10px 20px;
         text-decoration: none;
-        background: rgba(0,0,0,0.05);
-        color: #333;
-        border-radius: 8px;
+        background: rgba(0,123,255,0.15); /* 半透明蓝色按钮 */
+        color: #007bff;
+        border-radius: 12px;
         font-weight: 500;
-        transition: 0.3s;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,123,255,0.3);
+        backdrop-filter: blur(2px);
     }
+
     nav.primary a:hover {
         background: #0077b5;
         color: #fff;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     /* 社交链接 */
@@ -109,7 +122,7 @@
 
     <!-- 导航 -->
     <nav class="primary">
-        <a href="index.html">Home</a>
+        <a href="#" onclick="location.reload(); return false;">Home</a>
         <a href="education.html">Education</a>
         <a href="research.html">Research & Engineering</a>
         <a href="professional.html">Professional Experiences</a>
