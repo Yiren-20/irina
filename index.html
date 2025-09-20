@@ -149,15 +149,11 @@
             const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
             const bgStyle = `url(${randomImage}) no-repeat center center fixed`;
         
+            // 只设置 body 背景
             document.body.style.background = bgStyle;
             document.body.style.backgroundSize = 'cover';
-        
-            const panel = document.getElementById('panel');
-            if (panel) {
-                panel.style.background = bgStyle;
-                panel.style.backgroundSize = 'cover';
-            }
         });
+
 
 
     </script>
