@@ -13,7 +13,6 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
     <link rel="apple-touch-icon" href="./assets/img/favicon.png">
@@ -120,7 +119,6 @@
                     </div>
                 </div>
             </div>
-            <div class="panel-cover--overlay cover-slate"></div>
         </div>
 
         <!-- 页脚 -->
@@ -149,17 +147,11 @@
             const randomImage = imageList[Math.floor(Math.random() * imageList.length)];
             const bgStyle = `url(${randomImage}) no-repeat center center fixed`;
         
-            // 只设置 body 背景
+            // ✅ 只给 body 设置背景
             document.body.style.background = bgStyle;
             document.body.style.backgroundSize = 'cover';
         });
-
-
-
     </script>
-
-    <!-- 主脚本 -->
-<!--     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script> -->
 
 </body>
 </html>
