@@ -26,12 +26,12 @@
     .card {
         max-width: 900px;
         margin: 80px auto;
-        padding: 30px 20px;
-        background: rgba(255, 255, 255, 0.2); /* 半透明漂浮效果 */
+        padding: 30px 20px 50px 20px; /* 底部增加 padding */
+        background: rgba(255, 255, 255, 0.1); /* 更淡半透明 */
         border-radius: 16px;
         text-align: center;
         box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-        backdrop-filter: blur(1px); /* 背景轻微模糊，增强漂浮感 */
+        /* backdrop-filter: blur(1px); 可去掉模糊，背景更清晰 */
     }
 
     /* 头像 */
@@ -63,15 +63,14 @@
     /* 导航按钮 */
     nav.primary {
         margin-top: 20px;
-        display: inline-block;
-        padding: 10px 0;
-        background: rgba(255, 255, 255, 0.4); /* 浮动半透明背景 */
-        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     nav.primary a {
         display: inline-block;
-        margin: 5px 10px;
         padding: 10px 20px;
         text-decoration: none;
         background: rgba(0,123,255,0.15); /* 半透明蓝色按钮 */
@@ -80,7 +79,6 @@
         font-weight: 500;
         transition: all 0.3s ease;
         border: 1px solid rgba(0,123,255,0.3);
-        backdrop-filter: blur(2px);
     }
 
     nav.primary a:hover {
@@ -90,15 +88,28 @@
     }
 
     /* 社交链接 */
-    nav.social a {
-        margin: 0 8px;
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-        transition: 0.3s;
+    nav.social {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
+
+    nav.social a {
+        display: inline-block;
+        padding: 10px 16px;
+        text-decoration: none;
+        background: rgba(0,0,0,0.05);
+        color: #333;
+        border-radius: 12px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
     nav.social a:hover {
-        color: #0077b5;
+        background: #0077b5;
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -123,7 +134,6 @@
     <!-- 导航 -->
     <nav class="primary">
         <a href="javascript:void(0);" onclick="window.location.href=window.location.pathname;">Home</a>
-
         <a href="education.html">Education</a>
         <a href="research.html">Research & Engineering</a>
         <a href="professional.html">Professional Experiences</a>
