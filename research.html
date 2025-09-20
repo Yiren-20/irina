@@ -59,11 +59,13 @@
         }
 
         .media-group img, .media-group video { 
-            max-width: 48%;     /* 每行最多两张 */
-            max-height: 300px;  /* 视频/图片最大高度 */
+            max-width: 48%;      /* 每行最多两张 */
+            max-height: 300px;   /* 控制最大高度 */
+            width: auto;         
+            height: auto;
             border-radius: 12px; 
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            object-fit: cover;
+            object-fit: contain; 
             transition: transform 0.3s ease;
         }
 
@@ -80,10 +82,13 @@
         }
 
         .pic-gallery img {
-            max-width: 32%;  /* 每行最多三张 */
+            max-width: 32%;      /* 每行最多三张 */
+            max-height: 250px;   /* 控制最大高度 */
+            width: auto;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: contain;
         }
 
         .pic-gallery a {
@@ -137,7 +142,7 @@
         <!-- Hybrid Robotics Lab -->
         <section class="module">
             <h3>
-                Hybrid Robotics Lab,  University of California, Berkeley 
+                Hybrid Robotics Lab, University of California, Berkeley 
                 <span style="font-weight:normal;">US</span>
                 <span style="font-weight:normal;">(Sep 2025 – Present)</span>
             </h3>
@@ -159,10 +164,10 @@
                 <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/" target="_blank">Prof. Masayoshi Tomizuka</a>
             </p>
             <ul class="detail-list">
-                <li>This study proposes a novel framework that integrates Proximal Policy Optimization (PPO) with imitation learning.</li>
-                <li>An adaptive curriculum learning mechanism is implemented to dynamically adjust the training difficulty in accordance with the robot's performance</li>
-                <li>This research introduces CNN Embedding, which incorporates past and future information into observation sequences to enhance the policy network's ability to understand and plan complex motion tasks.</li>
-                <li>The training is conducted within the Isaac Sim environment, utilizing the Unitree H1-2 humanoid robot model.</li>
+                <li>Proposed a novel framework integrating Proximal Policy Optimization (PPO) with imitation learning.</li>
+                <li>Implemented adaptive curriculum learning to dynamically adjust training difficulty based on robot performance.</li>
+                <li>Introduced CNN Embedding to incorporate past and future information into observation sequences, enhancing policy network's planning for complex motion tasks.</li>
+                <li>Training conducted in Isaac Sim using the Unitree H1-2 humanoid robot model.</li>
             </ul>
             <div class="pic-gallery">
                 <img src="./assets/other_img/human_train.png" alt="Train">
@@ -173,7 +178,7 @@
         </section>
         
     </section>
----------------------------------------------
+
     <!-- Engineering Projects -->
     <section>
         <h2>Selected Engineering Projects</h2>
@@ -184,41 +189,28 @@
             <p>
                 Second Prize, 2023 East China Division of National Smart Car Competition (Mobile Robot Application track, Team Leader, Awarding Organization: Chinese Association of Automation)
             </p>
-        
-            <!-- Project Introduction -->
             <p>
-                This project was developed for the National College Student Intelligent Vehicle Competition. Using ROS and multiple sensors (LiDAR, RGB camera, IMU, microphone array), it creates a fully autonomous vehicle system capable of mapping, navigation, perception, and speech interaction.
+                Developed for the National College Student Smart Car Competition. Using ROS and multiple sensors (LiDAR, RGB camera, IMU, microphone array), the system enables fully autonomous mapping, navigation, perception, and speech interaction.
             </p>
-        
-            <!-- Features -->
             <h4>Features</h4>
             <ul class="detail-list">
-                <li><strong>Real-time SLAM & Localization:</strong> Maps and localizes the vehicle using AMCL and Extended Kalman Filter (EKF).</li>
+                <li><strong>Real-time SLAM & Localization:</strong> AMCL + EKF for mapping and localization.</li>
                 <li><strong>Path Planning & Navigation:</strong> Global (Dijkstra / A*) + local (DWA / TEB) planning for smooth navigation and dynamic obstacle avoidance.</li>
                 <li><strong>Object Detection:</strong> YOLO-based human detection and recognition.</li>
                 <li><strong>Speech Interaction:</strong> Voice command recognition (ASR) and TTS synthesis.</li>
-                <li><strong>Autonomous Driving:</strong> Integrates SLAM, path planning, and real-time obstacle detection for self-driving capability.</li>
-                <li><strong>Motion Control:</strong> Wheel velocity and steering controlled via a dedicated controller manager.</li>
+                <li><strong>Autonomous Driving:</strong> Integrates SLAM, path planning, and obstacle detection.</li>
+                <li><strong>Motion Control:</strong> Wheel velocity and steering managed via dedicated controller.</li>
             </ul>
-    
-            <!-- Innovations -->
             <h4>Innovations</h4>
             <ul class="detail-list">
-                <li>Enhanced localization accuracy with EKF.</li>
-                <li>Improved dynamic obstacle avoidance using TEB planner.</li>
+                <li>Enhanced localization accuracy using EKF.</li>
+                <li>Improved dynamic obstacle avoidance with TEB planner.</li>
                 <li>Real-time human recognition via YOLO deep learning model.</li>
             </ul>
-            <!-- Team -->
-            <h4>Team</h4>
-            <p><strong>University:</strong> Tongji University</p>
-            <p><strong>Advisors:</strong> Prof. Zhang Zhiming, Prof. Zhu Jin</p>
-        
-            <!-- Media & GitHub -->
             <div class="pic-gallery">
                 <img src="./assets/other_img/img_car.jpg" alt="Mobile Robot">
                 <a href="https://github.com/Yiren-20/Smart_car" target="_blank">View on GitHub</a>
             </div>
-        
             <div class="media-group">
                 <video controls>
                     <source src="./assets/video/smart_car.mp4" type="video/mp4">
@@ -227,8 +219,6 @@
             </div>
         </section>
 
-  
-        
         <!-- Mathematical Modeling -->
         <section class="module">
             <h3>Mathematical Modeling Competition <span style="font-weight:normal;">(Sep 2022)</span></h3>
@@ -236,14 +226,12 @@
                 Second Prize, 2022 Contemporary Undergraduate Mathematical Contest in Modeling (Team Leader, Awarding Organization: China Society for Industrial and Applied Mathematics)
             </p>
             <div class="media-group">
-                <img src="./assets/other_img/math_model.png" alt="workflow">
+                <img src="./assets/other_img/math_model.png" alt="Workflow">
                 <a href="./assets/files/Mathematical_Modeling_Paper.pdf" target="_blank">Download Paper (PDF)</a>
-                <a href="https://github.com/Yiren-20/Mathematical-Modeling" target="_blank">
-                    View on GitHub
-                </a>
+                <a href="https://github.com/Yiren-20/Mathematical-Modeling" target="_blank">View on GitHub</a>
             </div>
         </section>
-        
+
         <!-- Embedded Intelligent System -->
         <section class="module">
             <h3>Embedded Intelligent System Remote Clock <span style="font-weight:normal;">(2023)</span></h3>
@@ -251,11 +239,9 @@
                 Developed a remote clock system for embedded intelligent applications.
             </p>
             <div class="pic-gallery">
-                <img src="./assets/other_img/alarm_flowchat_en.png" alt="workflow">
+                <img src="./assets/other_img/alarm_flowchart_en.png" alt="Workflow">
                 <img src="./assets/other_img/embedded.jpg" alt="Embedded System Clock">
-                <a href="https://github.com/Yiren-20/The-embedded-intelligent-system-remote-clock" target="_blank">
-                    View on GitHub
-                </a>
+                <a href="https://github.com/Yiren-20/The-embedded-intelligent-system-remote-clock" target="_blank">View on GitHub</a>
             </div>
         </section>
 
@@ -265,6 +251,24 @@
             <p>
                 Designed and implemented a stereo vision system for real-time 3D reconstruction, generating accurate point clouds for robotic perception and environment modeling.
             </p>
+            <h4>Stereo Vision Pipeline</h4>
+                <ul>
+                    <li>Capture left and right images with the stereo camera.</li>
+                    <li>Calibrate both cameras using ~20 chessboard images to obtain intrinsic and extrinsic parameters.</li>
+                    <li>Rectify images to correct distortion and align epipolar lines for simpler feature matching.</li>
+                    <li>Compute the disparity map through cost calculation, aggregation, and optimization.</li>
+                    <li>Derive depth information from the disparity map.</li>
+                    <li>Generate a 3D point cloud; optionally apply texture mapping.</li>
+                </ul>
+
             <div class="pic-gallery">
+                <img src="./assets/other_img/stereo3.png" alt="Performance">
                 <img src="./assets/other_img/stereo1.png" alt="Performance">
                 <img src="./assets/other_img/stereo2.png" alt="Process">
+            </div>
+        </section>
+
+    </section>
+
+</body>
+</html>
