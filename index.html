@@ -9,111 +9,129 @@
     <meta name="author" content="Yiren Rong">
     <title>Yiren Rong | Home</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- 字体和图标 -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
+    <link rel="apple-touch-icon" href="./assets/img/favicon.png">
+    <link rel="icon" href="./assets/img/favicon.png">
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #333;
+        /* 确保 header 层级高于背景 */
+        .panel-cover {
+            position: relative;
+            z-index: 10;
         }
-        header {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 40px 20px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #0077b5;
-        }
-        header h1 {
-            margin: 10px 0;
-            font-size: 2em;
-        }
-        header p {
-            margin: 5px 0;
-        }
-        nav.primary, nav.social {
-            margin: 20px 0;
-        }
-        nav.primary a, nav.social a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        nav.social a:hover {
-            color: #0077b5;
-        }
-        footer {
-            text-align: center;
-            margin: 40px 0;
-            color: #666;
+        /* 可选：覆盖层透明度更低 */
+        .panel-cover--overlay.cover-slate {
+            opacity: 0.3;
         }
     </style>
 </head>
+
 <body>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
 
-<header>
-    <!-- 头像 -->
-    <img src="./assets/img/me.jpg" alt="Yiren Rong">
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <!-- 头像 -->
+                    <div class="ih-item circle effect right_to_left">            
+                        <a href="#" class="blog-button">
+                            <div class="img">
+                                <img src="./assets/img/me.jpg" alt="Yiren Rong" class="js-avatar iUp profilepic">
+                            </div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2>Be Brave</h2>
+                                    <p>2025 · Robotics & AI</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-    <!-- 姓名与简介 -->
-    <h1>Yiren Rong</h1>
-    <p>Master @ UC Berkeley | Bachelor @ Tongji Univ</p>
-    <p>Robotics engineer and researcher, passionate about intelligent systems and real-world robotics.</p>
+                    <!-- 名称和简介 -->
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="#" title="Yiren Rong">Yiren Rong</a>
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">Master @ UC Berkeley | Bachelor @ Tongji Univ</p>
+                    <hr class="panel-cover__divider iUp"/>
+                    <p id="description" class="panel-cover__description iUp">
+                        Robotics engineer and researcher, passionate about intelligent systems and real-world robotics.
+                    </p>
 
-    <!-- 导航栏 -->
-    <nav class="primary">
-        <a href="index.html">Home</a>
-        <a href="education.html">Education</a>
-        <a href="research.html">Research & Engineering</a>
-        <a href="professional.html">Professional Experiences</a>
-        <a href="passions.html">Personal Passions</a>
-        <a href="publications.html">Publications</a>
-    </nav>
+                    <!-- 导航 -->
+                    <div class="navigation-wrapper iUp">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="index.html" class="blog-button">Home</a></li>
+                                <li class="navigation__item"><a href="education.html" class="blog-button">Education</a></li>
+                                <li class="navigation__item"><a href="research.html" class="blog-button">Research & Engineering</a></li>
+                                <li class="navigation__item"><a href="professional.html" class="blog-button">Professional Experiences</a></li>
+                                <li class="navigation__item"><a href="passions.html" class="blog-button">Personal Passions</a></li>
+                                <li class="navigation__item"><a href="publications.html" class="blog-button">Publications</a></li>
+                            </ul>
+                        </nav>
 
-    <!-- 社交链接 -->
-    <nav class="social">
-        <a href="https://github.com/Yiren-20" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/yiren-rong-357842302" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="mailto:yirenrong20@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-    </nav>
-</header>
+                        <!-- 社交链接 -->
+                        <nav class="cover-navigation navigation--social">
+                            <ul class="navigation">
+                                <li class="navigation__item">
+                                    <a href="https://github.com/Yiren-20" title="GitHub" target="_blank">
+                                        <i class="social iconfont icon-github"></i>
+                                        <span class="label">GitHub</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="https://www.linkedin.com/in/yiren-rong-357842302" title="LinkedIn" target="_blank">
+                                        <i class="social iconfont icon-linkedin"></i>
+                                        <span class="label">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="mailto:yirenrong20@gmail.com" title="Email">
+                                        <i class="social iconfont icon-email"></i>
+                                        <span class="label">Email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
 
-<footer>
-    Powered by <a href="https://github.com/" target="_blank">GitHub Pages</a> · Customized by Yiren Rong
-</footer>
+        <!-- 页脚 -->
+        <div class="remark iUp">
+            <p class="power">Powered by <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a> · Customized by Yiren Rong</p>
+        </div>
+    </header>
 
-<!-- 随机背景图 -->
-<script>
-    const images = [
-        './assets/img/gallery/img2.jpg',
-        './assets/img/gallery/img3.jpg',
-        './assets/img/gallery/img4.jpg',
-        './assets/img/gallery/img5.jpg',
-        './assets/img/gallery/img6.jpg',
-        './assets/img/gallery/img7.jpg',
-        './assets/img/gallery/img8.jpg',
-        './assets/img/gallery/img9.jpg',
-        './assets/img/gallery/img10.jpg'
-    ];
-    const rand = images[Math.floor(Math.random() * images.length)];
-    document.body.style.background = `url(${rand}) no-repeat center center fixed`;
-    document.body.style.backgroundSize = 'cover';
-</script>
+    <!-- 随机本地背景脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                './assets/img/gallery/img2.jpg',
+                './assets/img/gallery/img3.jpg',
+                './assets/img/gallery/img4.jpg',
+                './assets/img/gallery/img5.jpg',
+                './assets/img/gallery/img6.jpg',
+                './assets/img/gallery/img7.jpg',
+                './assets/img/gallery/img8.jpg',
+                './assets/img/gallery/img9.jpg',
+                './assets/img/gallery/img10.jpg'
+            ];
+            const rand = images[Math.floor(Math.random() * images.length)];
+            document.body.style.background = `url(${rand}) no-repeat center center fixed`;
+            document.body.style.backgroundSize = 'cover';
+        });
+    </script>
 
+    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
 </body>
 </html>
