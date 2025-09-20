@@ -52,11 +52,11 @@
     .card p.subtitle {
         margin: 0 0 15px 0;
         font-weight: 500;
-        color: #555;
+        color: #000;
     }
     .card p.description {
         font-size: 0.95em;
-        color: #444;
+        color: #000;
         margin-bottom: 20px;
     }
 
@@ -122,7 +122,7 @@
 
     <!-- 导航 -->
     <nav class="primary">
-        <a href="javascript:void(0);" onclick="window.location.href=window.location.pathname;">Home</a>
+<!--         <a href="javascript:void(0);" onclick="window.location.href=window.location.pathname;">Home</a> -->
 
         <a href="education.html">Education</a>
         <a href="research.html">Research & Engineering</a>
@@ -154,7 +154,14 @@
         './assets/img/gallery/img7.jpg',
         './assets/img/gallery/img8.jpg',
         './assets/img/gallery/img9.jpg',
-        './assets/img/gallery/img10.jpg'
+        './assets/img/gallery/img10.jpg'，
+        './assets/img/gallery/img13.jpg'，
+        './assets/img/gallery/img14.jpg'，
+        './assets/img/gallery/img15.jpg'，
+        './assets/img/gallery/img16.jpg'，
+        './assets/img/gallery/img17.jpg'，
+        './assets/img/gallery/img18.jpg'
+        './assets/img/gallery/img19.jpg'
     ];
     const rand = images[Math.floor(Math.random() * images.length)];
     document.body.style.background = `url(${rand}) no-repeat center center fixed`;
