@@ -178,19 +178,51 @@
             <p>
                 Second Prize, 2023 East China Division of National Smart Car Competition (Mobile Robot Application track, Team Leader, Awarding Organization: Chinese Association of Automation)
             </p>
+        
+            <!-- Project Introduction -->
+            <p>
+                This project was developed for the National College Student Intelligent Vehicle Competition. Using ROS and multiple sensors (LiDAR, RGB camera, IMU, microphone array), it creates a fully autonomous vehicle system capable of mapping, navigation, perception, and speech interaction.
+            </p>
+        
+            <!-- Features -->
+            <h4>Features</h4>
             <ul class="detail-list">
-                <li>The smart car was configured with mecanum wheels for omnidirectional movement and equipped with LiDAR, a microphone array, an IMU and a camera for comprehensive sensing.</li>
-                <li>An adaptive curriculum learning mechanism is implemented to dynamically adjust the training difficulty in accordance with the robot's performance</li>
-                <li>This research introduces CNN Embedding, which incorporates past and future information into observation sequences to enhance the policy network's ability to understand and plan complex motion tasks.</li>
-                <li>The training is conducted within the Isaac Sim environment, utilizing the Unitree H1-2 humanoid robot model.</li>
+                <li><strong>Real-time SLAM & Localization:</strong> Maps and localizes the vehicle using AMCL and Extended Kalman Filter (EKF).</li>
+                <li><strong>Path Planning & Navigation:</strong> Global (Dijkstra / A*) + local (DWA / TEB) planning for smooth navigation and dynamic obstacle avoidance.</li>
+                <li><strong>Object Detection:</strong> YOLO-based human detection and recognition.</li>
+                <li><strong>Speech Interaction:</strong> Voice command recognition (ASR) and TTS synthesis.</li>
+                <li><strong>Autonomous Driving:</strong> Integrates SLAM, path planning, and real-time obstacle detection for self-driving capability.</li>
             </ul>
-            
+        
+            <!-- Innovations -->
+            <h4>Innovations</h4>
+            <ul class="detail-list">
+                <li>Enhanced localization accuracy with EKF.</li>
+                <li>Improved dynamic obstacle avoidance using TEB planner.</li>
+                <li>Real-time human recognition via YOLO deep learning model.</li>
+            </ul>
+        
+            <!-- Motion Control -->
+            <h4>Motion Control</h4>
+            <p>Wheel velocity and steering controlled via a dedicated controller manager.</p>
+        
+            <!-- Applications -->
+            <h4>Applications</h4>
+            <p>Autonomous cars, indoor mobile robots, and service robots.</p>
+        
+            <!-- Team -->
+            <h4>Team</h4>
+            <p><strong>Team Name:</strong> RuiXing · Tesla Huangdu</p>
+            <p><strong>University:</strong> Tongji University</p>
+            <p><strong>Advisors:</strong> Prof. Zhang Zhiming, Prof. Zhu Jin</p>
+            <p><strong>Members:</strong> Ye Longqin, Rong Yiren, Liu Yaxuan, Wu Zhiyuan</p>
+        
+            <!-- Media & GitHub -->
             <div class="pic-gallery">
                 <img src="./assets/other_img/img_car.jpg" alt="Mobile Robot">
-                <a href="https://github.com/Yiren-20/Smart_car" target="_blank">
-                    View on GitHub
-                </a>
+                <a href="https://github.com/Yiren-20/Smart_car" target="_blank">View on GitHub</a>
             </div>
+        
             <div class="media-group">
                 <video controls>
                     <source src="./assets/video/smart_car.mp4" type="video/mp4">
@@ -198,6 +230,7 @@
                 </video>
             </div>
         </section>
+
     </section>
 
     <!-- Engineering Projects -->
